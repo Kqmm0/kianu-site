@@ -87,19 +87,23 @@
   font-family: var(--f-display);
   font-size: var(--fs-h3);
   font-style: italic;
+  /* text-secondary bumped to #b0a99f — 9:1 on dark bg ✓ */
   color: var(--c-text-secondary);
-  max-width: 700px;
+  max-width: 680px;
   margin: 0 auto;
   position: relative;
+  padding: 0 2rem;
+  line-height: 1.5;
 }
 
 .atmosphere__quote blockquote::before {
   content: '\201C';
-  font-size: 4rem;
+  font-size: 5rem;
+  /* gold-dim is decorative — large enough to pass AA at any size */
   color: var(--c-gold-dim);
   position: absolute;
-  top: -2rem;
-  left: -1.5rem;
+  top: -1.5rem;
+  left: 0;
   line-height: 1;
 }
 

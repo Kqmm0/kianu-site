@@ -28,26 +28,42 @@
   transform: scale(1);
 }
 
+/* Multi-layer overlay:
+   1. bottom fade — lifts text area out of photo
+   2. left scrim — safe reading zone for text column
+   3. vignette — cinematic depth framing                */
 .hero__overlay {
   position: absolute;
   inset: 0;
   z-index: -1;
   background:
+    /* bottom lift — strong dark floor for text */
     linear-gradient(180deg,
-      rgba(5,5,5,0.4) 0%,
-      rgba(5,5,5,0.1) 30%,
-      rgba(5,5,5,0.3) 60%,
-      rgba(5,5,5,0.95) 100%
+      transparent             0%,
+      transparent            40%,
+      rgba(5,5,5,0.55)       65%,
+      rgba(5,5,5,0.92)       85%,
+      rgba(5,5,5,0.98)      100%
     ),
+    /* left reading zone — safe column for all hero copy */
     linear-gradient(90deg,
-      rgba(5,5,5,0.6) 0%,
-      transparent 50%
+      rgba(5,5,5,0.78)   0%,
+      rgba(5,5,5,0.45)  40%,
+      rgba(5,5,5,0.05)  65%,
+      transparent       100%
+    ),
+    /* cinematic corner vignette */
+    radial-gradient(ellipse 120% 100% at 100% 0%,
+      transparent 50%,
+      rgba(5,5,5,0.4) 100%
     );
 }
 
+/* === Text content sits inside safe zone === */
 .hero__content {
   position: relative;
   z-index: 1;
+  max-width: 620px;
 }
 
 .hero__subtitle {
@@ -58,6 +74,7 @@
   color: var(--c-gold);
   margin-bottom: 1.5rem;
   overflow: hidden;
+  /* Gold label on dark safe zone — no shadow needed */
 }
 
 .hero__subtitle span {
@@ -70,6 +87,8 @@
   margin-bottom: 1rem;
   line-height: 0.95;
   overflow: hidden;
+  /* Heading — strong contrast on dark scrim */
+  text-shadow: var(--text-shadow-subtle);
 }
 
 .hero__title em {
@@ -77,13 +96,15 @@
   color: var(--c-gold);
 }
 
+/* Description — sits in safe left zone, needs strong readability */
 .hero__desc {
   font-family: var(--f-accent);
   font-size: clamp(1.1rem, 1.5vw, 1.4rem);
-  color: var(--c-text-secondary);
-  max-width: 500px;
+  color: var(--c-text-secondary);  /* #b0a99f — 9:1 contrast ✓ */
+  max-width: 480px;
   margin-bottom: 2.5rem;
-  line-height: 1.6;
+  line-height: 1.7;
+  text-shadow: var(--text-shadow-image);
 }
 
 .hero__actions {
@@ -101,7 +122,7 @@
   flex-direction: column;
   align-items: center;
   gap: 0.75rem;
-  color: var(--c-text-muted);
+  color: var(--c-text-muted);  /* #7f7b75 — 4.6:1 ✓ */
 }
 
 .hero__scroll-text {
@@ -141,6 +162,22 @@
     align-items: flex-end;
     padding-bottom: 3rem;
   }
+
+  /* On mobile: full-width dark floor, no left column needed */
+  .hero__overlay {
+    background:
+      linear-gradient(180deg,
+        transparent          0%,
+        rgba(5,5,5,0.3)     30%,
+        rgba(5,5,5,0.75)    65%,
+        rgba(5,5,5,0.97)   100%
+      );
+  }
+
+  .hero__content {
+    max-width: 100%;
+  }
+
   .hero__scroll {
     display: none;
   }

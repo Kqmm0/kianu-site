@@ -236,14 +236,16 @@
   color: var(--c-gold);
 }
 
-/* Italic tagline — closer to title */
+/* Italic tagline — closer to title
+   Uses --c-text-muted which is now #7f7b75 (4.6:1 ✓ was failing) */
 .concept__title-accent {
   font-family: var(--f-accent);
   font-size: clamp(0.9rem, 1.15vw, 1.1rem);
   font-style: italic;
   color: var(--c-text-muted);
   margin-bottom: 1.5rem;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.03em;
+  line-height: 1.5;
 }
 
 /* Thin gold rule */

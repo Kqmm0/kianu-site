@@ -10,9 +10,15 @@
   --c-gold-light:   #ddc5a0;
   --c-gold-dim:     #a08660;
 
-  --c-text:         #f0ebe4;
-  --c-text-secondary: #8a8580;
-  --c-text-muted:   #5a5652;
+  /* Text tokens — contrast-tested against darkest bg (#050505)
+     --c-text            #f0ebe4  →  L≈0.86  contrast ≈ 17:1  ✓ AAA
+     --c-text-secondary  #b0a99f  →  L≈0.43  contrast ≈  9:1  ✓ AAA
+     --c-text-muted      #7f7b75  →  L≈0.21  contrast ≈  4.6:1 ✓ AA
+                         (was #5a5652 = 2.7:1 FAIL — fixed)             */
+  --c-text:           #f0ebe4;
+  --c-text-secondary: #b0a99f;   /* bumped from #8a8580 — warmer, AAA */
+  --c-text-muted:     #7f7b75;   /* bumped from #5a5652 — now passes AA */
+
   --c-border:       #2a2725;
   --c-border-light: #3a3735;
 
@@ -49,4 +55,8 @@
   /* === Misc === */
   --radius:         2px;
   --radius-lg:      4px;
+
+  /* === Readability — safe text shadows for text on images === */
+  --text-shadow-image: 0 1px 12px rgba(0,0,0,0.45), 0 2px 30px rgba(0,0,0,0.3);
+  --text-shadow-subtle: 0 1px 8px rgba(0,0,0,0.3);
 }
