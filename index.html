@@ -9,7 +9,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;1,6..96,400&family=Cormorant+Garamond:ital,wght@0,400;1,400&family=Sora:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;1,6..96,400&family=Cormorant+Garamond:ital,wght@0,400;1,400&family=Noto+Serif+JP:wght@300&family=Sora:wght@300;400;500&display=swap" rel="stylesheet">
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/variables.css">
@@ -108,36 +108,77 @@
   <!-- ========== CONCEPT ========== -->
   <section class="concept" id="concept">
     <div class="container concept__inner">
-      <div class="concept__visual" data-reveal="clip-left">
-        <div class="concept__image-wrapper">
+
+      <!-- LEFT — Visual Storytelling Block -->
+      <div class="concept__visual">
+
+        <!-- Ambient glow pulse -->
+        <div class="concept__glow" aria-hidden="true"></div>
+
+        <!-- Floating editorial dividers -->
+        <span class="concept__divider-line concept__divider-line--v" aria-hidden="true"></span>
+        <span class="concept__divider-line concept__divider-line--h" aria-hidden="true"></span>
+
+        <!-- Vertical Japanese calligraphy accent -->
+        <span class="concept__calligraphy" data-parallax="-0.06" aria-hidden="true">
+          日本の美しさとイタリアの情熱
+        </span>
+
+        <!-- Main cinematic image -->
+        <div class="concept__image-main" data-reveal="clip-left">
           <img
-            src="https://images.unsplash.com/photo-1540914124281-342587941389?w=800&q=80"
-            alt="Авторское блюдо — фьюжн японской и итальянской кухни"
-            class="concept__image"
+            src="https://images.unsplash.com/photo-1579027989536-b7b1f875659b?w=1200&q=85"
+            alt="Cinematic fusion — японская эстетика встречает итальянскую страсть"
+            loading="lazy"
           >
         </div>
-        <span class="concept__accent" data-parallax="-0.05" aria-hidden="true">味</span>
+
+        <!-- Editorial label -->
+        <span class="concept__visual-label" data-reveal="fade" style="transition-delay: 0.6s;">
+          Est. Stavropol
+        </span>
+
+        <!-- Floating secondary image — offset overlap -->
+        <div class="concept__image-secondary" data-reveal="fade-up" data-parallax="0.08" style="transition-delay: 0.3s;">
+          <img
+            src="https://images.unsplash.com/photo-1540914124281-342587941389?w=600&q=85"
+            alt="Авторское блюдо — фьюжн японской и итальянской кухни"
+            loading="lazy"
+          >
+        </div>
       </div>
 
+      <!-- RIGHT — Philosophy Text -->
       <div class="concept__text">
-        <p class="section-label" data-reveal="fade-up">Наша философия</p>
+        <p class="concept__label" data-reveal="fade-up">Наша философия</p>
+
         <h2 class="concept__title" data-reveal="fade-up" style="transition-delay: 0.1s;">
-          Itameshi — <em>искусство</em> двух культур
+          Itameshi — <em>искусство</em><br>двух культур
         </h2>
+
+        <p class="concept__title-accent" data-reveal="fade-up" style="transition-delay: 0.15s;">
+          Japanese soul, Italian heart
+        </p>
+
         <hr class="divider concept__divider" data-reveal="fade-up" style="transition-delay: 0.2s;">
+
         <p class="concept__desc" data-reveal="fade-up" style="transition-delay: 0.3s;">
-          Itameshi — это японский термин, объединяющий итальянскую гастрономию с японской эстетикой подачи. Мы создаём блюда, в которых пармезан встречает умами, паста — мисо, а тирамису обретает ноты матча.
+          Itameshi — японский термин, объединяющий итальянскую гастрономию с&nbsp;японской эстетикой подачи. Мы создаём блюда, в&nbsp;которых пармезан встречает умами, паста&nbsp;&mdash; мисо, а&nbsp;тирамису обретает ноты матча.
         </p>
+
         <p class="concept__desc" data-reveal="fade-up" style="transition-delay: 0.4s;">
-          Каждое блюдо — это диалог двух великих кухонь мира, сервированный с безупречным вниманием к деталям.
+          Каждое блюдо — диалог двух великих кухонь мира, сервированный с&nbsp;безупречным вниманием к&nbsp;деталям.
         </p>
+
         <div class="concept__tags" data-reveal-stagger>
           <span class="concept__tag">Фьюжн</span>
           <span class="concept__tag">Умами</span>
           <span class="concept__tag">Авторская подача</span>
           <span class="concept__tag">Сезонные продукты</span>
+          <span class="concept__tag">Itameshi</span>
         </div>
       </div>
+
     </div>
   </section>
 
