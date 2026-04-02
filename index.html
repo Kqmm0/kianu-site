@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Киану Итамеши — Japanese × Italian Fusion | Ставрополь</title>
+  <meta name="description" content="Киану Итамеши — ресторан японско-итальянской кухни в Ставрополе. Авторская кухня, атмосферный интерьер, незабываемый гастрономический опыт.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;1,6..96,400&family=Cormorant+Garamond:ital,wght@0,400;1,400&family=Sora:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/concept.css">
+  <link rel="stylesheet" href="css/highlights.css">
+  <link rel="stylesheet" href="css/atmosphere.css">
+  <link rel="stylesheet" href="css/menu.css">
+  <link rel="stylesheet" href="css/reviews.css">
+  <link rel="stylesheet" href="css/contacts.css">
+  <link rel="stylesheet" href="css/footer.css">
+
+  <!-- App -->
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+
+  <!-- Loader -->
+  <div class="loader" aria-hidden="true">
+    <span class="loader__text">Киану Итамеши</span>
+  </div>
+
+  <!-- Grain overlay -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ========== HEADER ========== -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#" class="header__logo">
+        Киану <span>Итамеши</span>
+      </a>
+
+      <nav class="header__nav" aria-label="Основная навигация">
+        <a href="#concept" class="header__link">Концепция</a>
+        <a href="#highlights" class="header__link">Блюда</a>
+        <a href="#atmosphere" class="header__link">Атмосфера</a>
+        <a href="#menu" class="header__link">Меню</a>
+        <a href="#contacts" class="header__link">Контакты</a>
+        <a href="tel:+78652000000" class="header__cta">Забронировать</a>
+      </nav>
+
+      <button class="header__burger" aria-label="Открыть меню" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <nav class="mobile-nav" aria-label="Мобильная навигация">
+    <a href="#concept" class="mobile-nav__link">Концепция</a>
+    <a href="#highlights" class="mobile-nav__link">Блюда</a>
+    <a href="#atmosphere" class="mobile-nav__link">Атмосфера</a>
+    <a href="#menu" class="mobile-nav__link">Меню</a>
+    <a href="#contacts" class="mobile-nav__link">Контакты</a>
+    <a href="tel:+78652000000" class="mobile-nav__link">Забронировать</a>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="hero">
+    <div class="hero__bg">
+      <img
+        src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&q=80"
+        alt="Интерьер ресторана Киану Итамеши"
+        class="hero__bg-image"
+      >
+    </div>
+    <div class="hero__overlay"></div>
+
+    <div class="container hero__content">
+      <p class="hero__subtitle" data-reveal="fade-up">
+        <span>Japanese × Italian Fusion — Ставрополь</span>
+      </p>
+      <h1 class="hero__title split-text" data-reveal="fade-up" style="transition-delay: 0.2s;">
+        Киану Итамеши
+      </h1>
+      <p class="hero__desc" data-reveal="fade-up" style="transition-delay: 0.4s;">
+        Где восток встречает запад. Авторская кухня на стыке японской утончённости и итальянской страсти.
+      </p>
+      <div class="hero__actions" data-reveal="fade-up" style="transition-delay: 0.6s;">
+        <a href="#menu" class="btn btn--filled">Смотреть меню</a>
+        <a href="#contacts" class="btn">Забронировать стол</a>
+      </div>
+    </div>
+
+    <div class="hero__scroll" aria-hidden="true">
+      <span class="hero__scroll-text">Scroll</span>
+      <span class="hero__scroll-line"></span>
+    </div>
+  </section>
+
+  <!-- ========== CONCEPT ========== -->
+  <section class="concept" id="concept">
+    <div class="container concept__inner">
+      <div class="concept__visual" data-reveal="clip-left">
+        <div class="concept__image-wrapper">
+          <img
+            src="https://images.unsplash.com/photo-1540914124281-342587941389?w=800&q=80"
+            alt="Авторское блюдо — фьюжн японской и итальянской кухни"
+            class="concept__image"
+          >
+        </div>
+        <span class="concept__accent" data-parallax="-0.05" aria-hidden="true">味</span>
+      </div>
+
+      <div class="concept__text">
+        <p class="section-label" data-reveal="fade-up">Наша философия</p>
+        <h2 class="concept__title" data-reveal="fade-up" style="transition-delay: 0.1s;">
+          Itameshi — <em>искусство</em> двух культур
+        </h2>
+        <hr class="divider concept__divider" data-reveal="fade-up" style="transition-delay: 0.2s;">
+        <p class="concept__desc" data-reveal="fade-up" style="transition-delay: 0.3s;">
+          Itameshi — это японский термин, объединяющий итальянскую гастрономию с японской эстетикой подачи. Мы создаём блюда, в которых пармезан встречает умами, паста — мисо, а тирамису обретает ноты матча.
+        </p>
+        <p class="concept__desc" data-reveal="fade-up" style="transition-delay: 0.4s;">
+          Каждое блюдо — это диалог двух великих кухонь мира, сервированный с безупречным вниманием к деталям.
+        </p>
+        <div class="concept__tags" data-reveal-stagger>
+          <span class="concept__tag">Фьюжн</span>
+          <span class="concept__tag">Умами</span>
+          <span class="concept__tag">Авторская подача</span>
+          <span class="concept__tag">Сезонные продукты</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SIGNATURE HIGHLIGHTS ========== -->
+  <section class="highlights" id="highlights">
+    <div class="container">
+      <div class="highlights__header">
+        <p class="section-label" data-reveal="fade-up">Подпись шефа</p>
+        <h2 class="highlights__title" data-reveal="fade-up" style="transition-delay: 0.1s;">
+          Signature Highlights
+        </h2>
+        <p class="highlights__subtitle" data-reveal="fade-up" style="transition-delay: 0.2s;">
+          Блюда, ради которых возвращаются
+        </p>
+      </div>
+    </div>
+
+    <div class="highlights__grid" data-reveal-stagger>
+      <article class="highlights__item">
+        <img
+          src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=600&q=80"
+          alt="Тартар из тунца с трюфельным маслом"
+          class="highlights__item-image"
+        >
+        <div class="highlights__item-overlay">
+          <h3 class="highlights__item-name">Тартар из тунца</h3>
+          <p class="highlights__item-desc">С трюфельным маслом и юдзу</p>
+          <span class="highlights__item-price">890 ₽</span>
+        </div>
+      </article>
+
+      <article class="highlights__item">
+        <img
+          src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=600&q=80"
+          alt="Паста с мисо и пармезаном"
+          class="highlights__item-image"
+        >
+        <div class="highlights__item-overlay">
+          <h3 class="highlights__item-name">Мисо Карбонара</h3>
+          <p class="highlights__item-desc">Паста с белым мисо и панчеттой</p>
+          <span class="highlights__item-price">750 ₽</span>
+        </div>
+      </article>
+
+      <article class="highlights__item">
+        <img
+          src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=600&q=80"
+          alt="Матча тирамису"
+          class="highlights__item-image"
+        >
+        <div class="highlights__item-overlay">
+          <h3 class="highlights__item-name">Матча Тирамису</h3>
+          <p class="highlights__item-desc">Классика с японским характером</p>
+          <span class="highlights__item-price">520 ₽</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ========== ATMOSPHERE ========== -->
+  <section class="atmosphere" id="atmosphere">
+    <div class="container">
+      <div class="atmosphere__header">
+        <p class="section-label" data-reveal="fade-up">Пространство</p>
+        <h2 class="atmosphere__title" data-reveal="fade-up" style="transition-delay: 0.1s;">
+          Атмосфера
+        </h2>
+        <p class="atmosphere__subtitle" data-reveal="fade-up" style="transition-delay: 0.2s;">
+          Минималистичный интерьер, тёплый свет, натуральные материалы — пространство, где хочется быть
+        </p>
+      </div>
+
+      <div class="atmosphere__gallery" data-reveal-stagger>
+        <div class="atmosphere__photo">
+          <img
+            src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80"
+            alt="Зал ресторана — тёплое освещение"
+          >
+        </div>
+        <div class="atmosphere__photo">
+          <img
+            src="https://images.unsplash.com/photo-1559329007-40df8a9345d8?w=600&q=80"
+            alt="Барная стойка"
+          >
+        </div>
+        <div class="atmosphere__photo">
+          <img
+            src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=500&q=80"
+            alt="Детали интерьера"
+          >
+        </div>
+        <div class="atmosphere__photo">
+          <img
+            src="https://images.unsplash.com/photo-1550966871-3ed3cdb51f3a?w=500&q=80"
+            alt="Уютная зона для гостей"
+          >
+        </div>
+      </div>
+
+      <div class="atmosphere__quote" data-reveal="fade-up">
+        <blockquote>
+          Место, куда приходишь за вкусом — и остаёшься ради атмосферы
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== MENU PREVIEW ========== -->
+  <section class="menu-preview" id="menu">
+    <div class="container menu-preview__inner">
+      <div class="menu-preview__header">
+        <p class="section-label" data-reveal="fade-up">Гастрономия</p>
+        <h2 class="menu-preview__title" data-reveal="fade-up" style="transition-delay: 0.1s;">
+          Меню
+        </h2>
+        <p class="menu-preview__desc" data-reveal="fade-up" style="transition-delay: 0.2s;">
+          Наше меню — это путешествие между Токио и Римом. Сезонные продукты, авторские рецепты, идеальный баланс вкусов.
+        </p>
+        <div class="menu-preview__cta" data-reveal="fade-up" style="transition-delay: 0.3s;">
+          <a href="#" class="btn">Полное меню</a>
+        </div>
+      </div>
+
+      <div class="menu-preview__categories">
+        <!-- Starters -->
+        <div class="menu-category" data-reveal="fade-up">
+          <h3 class="menu-category__title">Стартеры</h3>
+          <div class="menu-item">
+            <div class="menu-item__info">
+              <div class="menu-item__name">Тартар из лосося с юдзу</div>
+              <div class="menu-item__desc">Лосось, юдзу, авокадо, кунжут</div>
+            </div>
+            <span class="menu-item__price">690 ₽</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__info">
+              <div class="menu-item__name">Бурратта с мисо-карамелью</div>
+              <div class="menu-item__desc">Бурратта, томаты, мисо, базилик</div>
+            </div>
+            <span class="menu-item__price">780 ₽</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__info">
+              <div class="menu-item__name">Эдамаме с трюфельной солью</div>
+              <div class="menu-item__desc">Бобы эдамаме, трюфель, морская соль</div>
+            </div>
+            <span class="menu-item__price">420 ₽</span>
+          </div>
+        </div>
+
+        <!-- Mains -->
+        <div class="menu-category" data-reveal="fade-up">
+          <h3 class="menu-category__title">Основные блюда</h3>
+          <div class="menu-item">
+            <div class="menu-item__info">
+              <div class="menu-item__name">Мисо Карбонара</div>
+              <div class="menu-item__desc">Спагетти, белое мисо, панчетта, пармезан</div>
+            </div>
+            <span class="menu-item__price">750 ₽</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__info">
+              <div class="menu-item__name">Ризотто с даси и грибами шиитаке</div>
+              <div class="menu-item__desc">Арборио, бульон даси, шиитаке, пармезан</div>
+            </div>
+            <span class="menu-item__price">820 ₽</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__info">
+              <div class="menu-item__name">Стейк рибай с васаби-баттером</div>
+              <div class="menu-item__desc">Мраморная говядина, васаби масло, овощи</div>
+            </div>
+            <span class="menu-item__price">1 690 ₽</span>
+          </div>
+        </div>
+
+        <!-- Desserts -->
+        <div class="menu-category" data-reveal="fade-up">
+          <h3 class="menu-category__title">Десерты</h3>
+          <div class="menu-item">
+            <div class="menu-item__info">
+              <div class="menu-item__name">Матча Тирамису</div>
+              <div class="menu-item__desc">Маскарпоне, матча, савоярди</div>
+            </div>
+            <span class="menu-item__price">520 ₽</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__info">
+              <div class="menu-item__name">Панна-котта юдзу</div>
+              <div class="menu-item__desc">Сливки, юдзу, белый шоколад</div>
+            </div>
+            <span class="menu-item__price">480 ₽</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== REVIEWS ========== -->
+  <section class="reviews" id="reviews">
+    <div class="container">
+      <div class="reviews__header">
+        <p class="section-label" data-reveal="fade-up">Отзывы</p>
+        <h2 class="reviews__title" data-reveal="fade-up" style="transition-delay: 0.1s;">
+          Гости о нас
+        </h2>
+      </div>
+
+      <div class="reviews__track-wrapper" data-reveal="fade-up" style="transition-delay: 0.2s;">
+        <div class="reviews__track">
+
+          <article class="review-card">
+            <span class="review-card__stars" aria-label="5 из 5">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            <div class="review-card__quote-mark">&ldquo;</div>
+            <p class="review-card__text">
+              Лучший фьюжн в городе. Мисо карбонара — это шедевр. Атмосфера невероятная, чувствуешь себя в Токио и Милане одновременно.
+            </p>
+            <div class="review-card__author">
+              <div class="review-card__avatar">А</div>
+              <div>
+                <div class="review-card__name">Анна К.</div>
+                <div class="review-card__source">Яндекс Карты</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="review-card">
+            <span class="review-card__stars" aria-label="5 из 5">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            <div class="review-card__quote-mark">&ldquo;</div>
+            <p class="review-card__text">
+              Пришли на ужин и были поражены. Подача блюд — как искусство. Ризотто с даси — нечто невероятное. Обязательно вернёмся.
+            </p>
+            <div class="review-card__author">
+              <div class="review-card__avatar">Д</div>
+              <div>
+                <div class="review-card__name">Дмитрий В.</div>
+                <div class="review-card__source">Google</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="review-card">
+            <span class="review-card__stars" aria-label="5 из 5">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            <div class="review-card__quote-mark">&ldquo;</div>
+            <p class="review-card__text">
+              Идеальное место для свидания. Тёплый свет, минималистичный дизайн, потрясающее меню. Матча тирамису — моя новая любовь.
+            </p>
+            <div class="review-card__author">
+              <div class="review-card__avatar">М</div>
+              <div>
+                <div class="review-card__name">Мария Л.</div>
+                <div class="review-card__source">2GIS</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="review-card">
+            <span class="review-card__stars" aria-label="5 из 5">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            <div class="review-card__quote-mark">&ldquo;</div>
+            <p class="review-card__text">
+              Наконец-то в Ставрополе есть место с настоящим вкусом и стилем. Каждый раз пробую что-то новое — и каждый раз восторг.
+            </p>
+            <div class="review-card__author">
+              <div class="review-card__avatar">И</div>
+              <div>
+                <div class="review-card__name">Игорь С.</div>
+                <div class="review-card__source">Яндекс Карты</div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <div class="reviews__nav" data-reveal="fade-up" style="transition-delay: 0.3s;">
+        <button class="reviews__nav-btn reviews__nav-btn--prev" aria-label="Предыдущий отзыв">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M19 12H5M5 12L12 19M5 12L12 5"/>
+          </svg>
+        </button>
+        <button class="reviews__nav-btn reviews__nav-btn--next" aria-label="Следующий отзыв">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M5 12H19M19 12L12 5M19 12L12 19"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACTS ========== -->
+  <section class="contacts" id="contacts">
+    <div class="container contacts__inner">
+      <div class="contacts__info">
+        <p class="section-label" data-reveal="fade-up">Найти нас</p>
+        <h2 class="contacts__title" data-reveal="fade-up" style="transition-delay: 0.1s;">
+          Контакты
+        </h2>
+
+        <div class="contacts__block" data-reveal="fade-up" style="transition-delay: 0.2s;">
+          <p class="contacts__block-label">Адрес</p>
+          <p class="contacts__block-text">
+            г. Ставрополь, ул. Дзержинского, 160
+          </p>
+        </div>
+
+        <div class="contacts__block" data-reveal="fade-up" style="transition-delay: 0.3s;">
+          <p class="contacts__block-label">Часы работы</p>
+          <p class="contacts__block-text">
+            Пн — Чт: 12:00 — 23:00<br>
+            Пт — Сб: 12:00 — 00:00<br>
+            Вс: 12:00 — 22:00
+          </p>
+        </div>
+
+        <div class="contacts__block" data-reveal="fade-up" style="transition-delay: 0.4s;">
+          <p class="contacts__block-label">Связаться</p>
+          <p class="contacts__block-text">
+            <a href="tel:+78652000000">+7 (865) 200-00-00</a><br>
+            <a href="mailto:hello@kianu.ru">hello@kianu.ru</a>
+          </p>
+        </div>
+
+        <div class="contacts__actions" data-reveal="fade-up" style="transition-delay: 0.5s;">
+          <a href="tel:+78652000000" class="btn btn--filled">Позвонить</a>
+          <a
+            href="https://yandex.ru/maps/-/CDaZvK"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn"
+          >Построить маршрут</a>
+        </div>
+      </div>
+
+      <div class="contacts__map" data-reveal="scale">
+        <iframe
+          src="https://yandex.ru/map-widget/v1/?ll=41.977282%2C45.044820&z=16&pt=41.977282%2C45.044820%2Cpm2rdl"
+          allowfullscreen
+          loading="lazy"
+          title="Карта — Киану Итамеши, ул. Дзержинского 160, Ставрополь"
+        ></iframe>
+        <div class="contacts__map-overlay">
+          <span>Нажмите для взаимодействия</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        Киану <span>Итамеши</span>
+      </div>
+      <div class="footer__links">
+        <a href="#menu" class="footer__link">Меню</a>
+        <a href="#contacts" class="footer__link">Контакты</a>
+        <a href="tel:+78652000000" class="footer__link">Бронь</a>
+      </div>
+      <p class="footer__copy">&copy; 2026 Киану Итамеши. Ставрополь.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+/* === Contacts === */
+.contacts {
+  padding: var(--s-section) 0;
+  position: relative;
+}
+
+.contacts__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(3rem, 6vw, 6rem);
+  align-items: start;
+}
+
+.contacts__info {
+  max-width: 500px;
+}
+
+.contacts__title {
+  font-size: var(--fs-h2);
+  margin-bottom: var(--s-element);
+}
+
+.contacts__block {
+  margin-bottom: 2rem;
+}
+
+.contacts__block-label {
+  font-size: var(--fs-label);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--c-gold);
+  margin-bottom: 0.75rem;
+}
+
+.contacts__block-text {
+  color: var(--c-text-secondary);
+  line-height: 1.8;
+}
+
+.contacts__block-text a {
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+.contacts__block-text a:hover {
+  color: var(--c-gold);
+}
+
+.contacts__actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2.5rem;
+}
+
+/* === Map Area === */
+.contacts__map {
+  position: relative;
+  aspect-ratio: 1;
+  background: var(--c-bg-card);
+  border: 1px solid var(--c-border);
+  overflow: hidden;
+}
+
+.contacts__map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  filter: grayscale(1) invert(1) contrast(0.9) brightness(0.6);
+  opacity: 0.7;
+  transition: all var(--duration-mid) var(--ease-out);
+}
+
+.contacts__map:hover iframe {
+  opacity: 1;
+  filter: grayscale(0.6) invert(1) contrast(0.9) brightness(0.6);
+}
+
+.contacts__map-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(5,5,5,0.4);
+  opacity: 1;
+  transition: opacity var(--duration-fast) var(--ease-out);
+  pointer-events: none;
+}
+
+.contacts__map:hover .contacts__map-overlay {
+  opacity: 0;
+}
+
+.contacts__map-overlay span {
+  font-size: var(--fs-label);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--c-text-secondary);
+  padding: 0.75rem 1.5rem;
+  border: 1px solid var(--c-border-light);
+}
+
+@media (max-width: 900px) {
+  .contacts__inner {
+    grid-template-columns: 1fr;
+  }
+  .contacts__map {
+    aspect-ratio: 16 / 10;
+  }
+}

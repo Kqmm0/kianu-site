@@ -1,0 +1,52 @@
+:root {
+  /* === Colors === */
+  --c-bg-deep:      #050505;
+  --c-bg:           #0a0a0a;
+  --c-bg-elevated:  #111111;
+  --c-bg-card:      #161616;
+  --c-bg-subtle:    #1c1c1c;
+
+  --c-gold:         #c8a97e;
+  --c-gold-light:   #ddc5a0;
+  --c-gold-dim:     #a08660;
+
+  --c-text:         #f0ebe4;
+  --c-text-secondary: #8a8580;
+  --c-text-muted:   #5a5652;
+  --c-border:       #2a2725;
+  --c-border-light: #3a3735;
+
+  /* === Typography === */
+  --f-display:      'Bodoni Moda', 'Didot', serif;
+  --f-body:         'Sora', sans-serif;
+  --f-accent:       'Cormorant Garamond', serif;
+
+  --fs-hero:        clamp(3.5rem, 8vw, 9rem);
+  --fs-h1:          clamp(2.5rem, 5vw, 5rem);
+  --fs-h2:          clamp(2rem, 4vw, 3.5rem);
+  --fs-h3:          clamp(1.25rem, 2vw, 1.75rem);
+  --fs-body:        clamp(0.95rem, 1.1vw, 1.1rem);
+  --fs-small:       clamp(0.8rem, 0.9vw, 0.9rem);
+  --fs-label:       0.75rem;
+
+  /* === Spacing === */
+  --s-section:      clamp(6rem, 12vh, 10rem);
+  --s-block:        clamp(3rem, 6vh, 5rem);
+  --s-element:      clamp(1.5rem, 3vh, 2.5rem);
+
+  /* === Layout === */
+  --max-w:          1320px;
+  --gutter:         clamp(1.5rem, 4vw, 4rem);
+
+  /* === Motion === */
+  --ease-out:       cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out:    cubic-bezier(0.65, 0, 0.35, 1);
+  --duration-fast:  0.3s;
+  --duration-mid:   0.6s;
+  --duration-slow:  1s;
+  --duration-reveal: 1.2s;
+
+  /* === Misc === */
+  --radius:         2px;
+  --radius-lg:      4px;
+}
