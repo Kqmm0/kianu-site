@@ -102,8 +102,8 @@
   font-size: var(--fs-hero);
   color: var(--c-text);
   margin-bottom: 1rem;
-  line-height: 0.95;
-  overflow: hidden;
+  line-height: 1.05;
+  overflow: visible;
   /* Heading — strong contrast on dark scrim */
   text-shadow: var(--text-shadow-subtle);
 }
