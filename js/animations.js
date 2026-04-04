@@ -79,7 +79,6 @@ export function initReviewsSlider() {
 
   let current = 0;
   const cards = track.querySelectorAll('.review-card');
-  const gap = parseInt(getComputedStyle(track).gap) || 32;
 
   function isMobile() {
     return window.innerWidth < 768;
@@ -89,6 +88,10 @@ export function initReviewsSlider() {
     if (isMobile()) return 1;
     if (window.innerWidth < 1024) return 2;
     return 3;
+  }
+
+  function getGap() {
+    return parseInt(getComputedStyle(track).gap) || 0;
   }
 
   function updateDots() {
@@ -102,14 +105,21 @@ export function initReviewsSlider() {
     const max = Math.max(0, cards.length - visible);
     current = Math.min(Math.max(current + dir, 0), max);
     const cardWidth = cards[0].offsetWidth;
+    const gap = getGap();
 
     if (isMobile() && wrapper) {
+      /* Mobile — native scroll with snap */
+      track.style.transform = '';
       wrapper.scrollTo({
         left: current * (cardWidth + gap),
         behavior: 'smooth'
       });
     } else {
-      track.style.transform = `translateX(-${current * (cardWidth + gap)}px)`;
+      /* Desktop — translateX on track */
+      if (wrapper) wrapper.scrollLeft = 0;
+      track.style.transform = current === 0
+        ? 'translateX(0)'
+        : `translateX(-${current * (cardWidth + gap)}px)`;
     }
     updateDots();
   }
@@ -131,8 +141,11 @@ export function initReviewsSlider() {
       clearTimeout(scrollTimeout);
       scrollTimeout = setTimeout(() => {
         if (!isMobile()) return;
-        const cardWidth = cards[0].offsetWidth + gap;
-        const newCurrent = Math.round(wrapper.scrollLeft / cardWidth);
+        const cardWidth = cards[0].offsetWidth;
+        const gap = getGap();
+        const step = cardWidth + gap;
+        if (step === 0) return;
+        const newCurrent = Math.round(wrapper.scrollLeft / step);
         if (newCurrent !== current && newCurrent >= 0 && newCurrent < cards.length) {
           current = newCurrent;
           updateDots();
@@ -141,7 +154,16 @@ export function initReviewsSlider() {
     }, { passive: true });
   }
 
-  window.addEventListener('resize', () => slide(0));
+  /* Reset on resize — clear stale state when switching modes */
+  let wasMobile = isMobile();
+  window.addEventListener('resize', () => {
+    const nowMobile = isMobile();
+    if (nowMobile !== wasMobile) {
+      current = 0;
+      wasMobile = nowMobile;
+    }
+    slide(0);
+  });
 }
 
 /* === Full Menu Tabs === */

@@ -22,13 +22,14 @@
 
 .reviews__track {
   display: flex;
+  width: 100%;
   gap: clamp(1.5rem, 3vw, 2rem);
   transition: transform var(--duration-mid) var(--ease-out);
 }
 
 .review-card {
-  flex: 0 0 calc(33.333% - 1.5rem);
-  min-width: 300px;
+  flex: 0 0 calc(33.333% - 1.4rem);
+  min-width: 280px;
   background: var(--c-bg-card);
   border: 1px solid var(--c-border);
   padding: clamp(2rem, 3vw, 3rem);
@@ -141,6 +142,9 @@
     flex: 0 0 85vw;
     min-width: unset;
     scroll-snap-align: start;
+  }
+  .reviews__track {
+    width: max-content;
   }
   .reviews__track-wrapper {
     overflow-x: auto;
