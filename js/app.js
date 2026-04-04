@@ -9,6 +9,8 @@ import {
   initParallax,
   initReviewsSlider,
   initSmoothScroll,
+  initImageLoad,
+  initFullMenuTabs,
 } from './animations.js';
 
 /* === Page Loader === */
@@ -34,4 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initParallax();
   initReviewsSlider();
   initSmoothScroll();
+  initImageLoad();
+  initFullMenuTabs();
 });

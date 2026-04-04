@@ -70,19 +70,31 @@ export function initParallax() {
 
 /* === Reviews Slider === */
 export function initReviewsSlider() {
+  const wrapper = document.querySelector('.reviews__track-wrapper');
   const track = document.querySelector('.reviews__track');
   const prevBtn = document.querySelector('.reviews__nav-btn--prev');
   const nextBtn = document.querySelector('.reviews__nav-btn--next');
+  const dots = document.querySelectorAll('.reviews__dot');
   if (!track || !prevBtn || !nextBtn) return;
 
   let current = 0;
   const cards = track.querySelectorAll('.review-card');
   const gap = parseInt(getComputedStyle(track).gap) || 32;
 
+  function isMobile() {
+    return window.innerWidth < 768;
+  }
+
   function getVisibleCount() {
-    if (window.innerWidth < 768) return 1;
+    if (isMobile()) return 1;
     if (window.innerWidth < 1024) return 2;
     return 3;
+  }
+
+  function updateDots() {
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('is-active', i === current);
+    });
   }
 
   function slide(dir) {
@@ -90,13 +102,76 @@ export function initReviewsSlider() {
     const max = Math.max(0, cards.length - visible);
     current = Math.min(Math.max(current + dir, 0), max);
     const cardWidth = cards[0].offsetWidth;
-    track.style.transform = `translateX(-${current * (cardWidth + gap)}px)`;
+
+    if (isMobile() && wrapper) {
+      wrapper.scrollTo({
+        left: current * (cardWidth + gap),
+        behavior: 'smooth'
+      });
+    } else {
+      track.style.transform = `translateX(-${current * (cardWidth + gap)}px)`;
+    }
+    updateDots();
   }
 
   prevBtn.addEventListener('click', () => slide(-1));
   nextBtn.addEventListener('click', () => slide(1));
 
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => {
+      current = i;
+      slide(0);
+    });
+  });
+
+  /* Sync dots on manual swipe (mobile) */
+  if (wrapper) {
+    let scrollTimeout;
+    wrapper.addEventListener('scroll', () => {
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        if (!isMobile()) return;
+        const cardWidth = cards[0].offsetWidth + gap;
+        const newCurrent = Math.round(wrapper.scrollLeft / cardWidth);
+        if (newCurrent !== current && newCurrent >= 0 && newCurrent < cards.length) {
+          current = newCurrent;
+          updateDots();
+        }
+      }, 100);
+    }, { passive: true });
+  }
+
   window.addEventListener('resize', () => slide(0));
+}
+
+/* === Full Menu Tabs === */
+export function initFullMenuTabs() {
+  const tabs = document.querySelectorAll('.full-menu__tab');
+  const panels = document.querySelectorAll('.full-menu__panel');
+  if (!tabs.length || !panels.length) return;
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const target = tab.dataset.tab;
+      tabs.forEach(t => t.classList.remove('is-active'));
+      panels.forEach(p => p.classList.remove('is-active'));
+      tab.classList.add('is-active');
+      const panel = document.querySelector(`.full-menu__panel[data-panel="${target}"]`);
+      if (panel) panel.classList.add('is-active');
+    });
+  });
+}
+
+/* === Atmosphere image fade-in on load === */
+export function initImageLoad() {
+  const photos = document.querySelectorAll('.atmosphere__photo img');
+  photos.forEach(img => {
+    if (img.complete && img.naturalWidth > 0) {
+      img.classList.add('is-loaded');
+    } else {
+      img.addEventListener('load', () => img.classList.add('is-loaded'));
+    }
+  });
 }
 
 /* === Smooth anchor links === */

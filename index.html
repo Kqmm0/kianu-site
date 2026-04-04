@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="css/highlights.css">
   <link rel="stylesheet" href="css/atmosphere.css">
   <link rel="stylesheet" href="css/menu.css">
+  <link rel="stylesheet" href="css/full-menu.css">
   <link rel="stylesheet" href="css/reviews.css">
   <link rel="stylesheet" href="css/contacts.css">
   <link rel="stylesheet" href="css/footer.css">
@@ -254,6 +255,13 @@
       <div class="atmosphere__gallery" data-reveal-stagger>
         <div class="atmosphere__photo">
           <img
+            src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=1200&q=80"
+            alt="Панорама ресторана — вечерняя атмосфера"
+            loading="lazy"
+          >
+        </div>
+        <div class="atmosphere__photo">
+          <img
             src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80"
             alt="Зал ресторана — тёплое освещение"
           >
@@ -298,7 +306,7 @@
           Наше меню — это путешествие между Токио и Римом. Сезонные продукты, авторские рецепты, идеальный баланс вкусов.
         </p>
         <div class="menu-preview__cta" data-reveal="fade-up" style="transition-delay: 0.3s;">
-          <a href="#" class="btn">Полное меню</a>
+          <a href="#full-menu" class="btn">Полное меню</a>
         </div>
       </div>
 
@@ -373,6 +381,270 @@
             <span class="menu-item__price">480 ₽</span>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FULL MENU ========== -->
+  <section class="full-menu" id="full-menu">
+    <div class="container">
+      <div class="full-menu__header" data-reveal="fade-up">
+        <p class="section-label">Карта блюд</p>
+        <h2 class="full-menu__title">Полное меню</h2>
+      </div>
+
+      <div class="full-menu__tabs" data-reveal="fade-up" style="transition-delay: 0.1s;">
+        <button class="full-menu__tab is-active" data-tab="starters">Стартеры</button>
+        <button class="full-menu__tab" data-tab="sushi">Суши и сашими</button>
+        <button class="full-menu__tab" data-tab="mains">Основные блюда</button>
+        <button class="full-menu__tab" data-tab="pasta">Паста</button>
+        <button class="full-menu__tab" data-tab="desserts">Десерты</button>
+        <button class="full-menu__tab" data-tab="drinks">Напитки</button>
+      </div>
+
+      <div class="full-menu__content" data-reveal="fade-up" style="transition-delay: 0.2s;">
+
+        <!-- Стартеры -->
+        <div class="full-menu__panel is-active" data-panel="starters">
+          <div class="menu-item">
+            <div class="menu-item__info">
+              <div class="menu-item__name">Тартар из лосося с юдзу</div>
+              <div class="menu-item__desc">Лосось, юдзу, авокадо, кунжут</div>
+            </div>
+            <span class="menu-item__price">690 ₽</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__info">
+              <div class="menu-item__name">Бурратта с мисо-карамелью</div>
+              <div class="menu-item__desc">Бурратта, томаты, мисо, базилик</div>
+            </div>
+            <span class="menu-item__price">780 ₽</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__info">
+              <div class="menu-item__name">Эдамаме с трюфельной солью</div>
+              <div class="menu-item__desc">Бобы эдамаме, трюфель, морская соль</div>
+            </div>
+            <span class="menu-item__price">420 ₽</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__info">
+              <div class="menu-item__name">Гёдза с уткой и понзу</div>
+              <div class="menu-item__desc">Утка, понзу, кунжут, зелёный лук</div>
+            </div>
+            <span class="menu-item__price">560 ₽</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__info">
+              <div class="menu-item__name">Карпаччо из гребешка</div>
+              <div class="menu-item__desc">Гребешок, юдзу, оливковое масло, микрозелень</div>
+            </div>
+            <span class="menu-item__price">890 ₽</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__info">
+              <div class="menu-item__name">Темпура из цветов цукини</div>
+              <div class="menu-item__desc">Цукини, темпура, понзу соус</div>
+            </div>
+            <span class="menu-item__price">520 ₽</span>
+          </div>
+        </div>
+
+        <!-- Суши и сашими -->
+        <div class="full-menu__panel" data-panel="sushi">
+          <div class="menu-item">
+            <div class="menu-item__info">
+              <div class="menu-item__name">Нигири сет «Омакасе»</div>
+              <div class="menu-item__desc">8 нигири от шефа, васаби, имбирь</div>
+            </div>
+            <span class="menu-item__price">1 490 ₽</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__info">
+              <div class="menu-item__name">Сашими из тунца и лосося</div>
+              <div class="menu-item__desc">Тунец, лосось, дайкон, соевый соус</div>
+            </div>
+            <span class="menu-item__price">980 ₽</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__info">
+              <div class="menu-item__name">Ролл «Итамеши» с трюфелем</div>
+              <div class="menu-item__desc">Тунец, авокадо, трюфельное масло, рис</div>
+            </div>
+            <span class="menu-item__price">1 120 ₽</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__info">
+              <div class="menu-item__name">Унаги нигири с бальзамиком</div>
+              <div class="menu-item__desc">Угорь, бальзамический крем, кунжут</div>
+            </div>
+            <span class="menu-item__price">720 ₽</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__info">
+              <div class="menu-item__name">Тартар из тунца с юдзу</div>
+              <div class="menu-item__desc">Тунец, юдзу, авокадо, чили</div>
+            </div>
+            <span class="menu-item__price">890 ₽</span>
+          </div>
+        </div>
+
+        <!-- Основные блюда -->
+        <div class="full-menu__panel" data-panel="mains">
+          <div class="menu-item">
+            <div class="menu-item__info">
+              <div class="menu-item__name">Мисо Карбонара</div>
+              <div class="menu-item__desc">Спагетти, белое мисо, панчетта, пармезан</div>
+            </div>
+            <span class="menu-item__price">750 ₽</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__info">
+              <div class="menu-item__name">Ризотто с даси и шиитаке</div>
+              <div class="menu-item__desc">Арборио, бульон даси, шиитаке, пармезан</div>
+            </div>
+            <span class="menu-item__price">820 ₽</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__info">
+              <div class="menu-item__name">Стейк рибай с васаби-баттером</div>
+              <div class="menu-item__desc">Мраморная говядина, васаби масло, овощи</div>
+            </div>
+            <span class="menu-item__price">1 690 ₽</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__info">
+              <div class="menu-item__name">Чёрная треска с мисо-глейзом</div>
+              <div class="menu-item__desc">Треска, белое мисо, бок-чой</div>
+            </div>
+            <span class="menu-item__price">1 380 ₽</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__info">
+              <div class="menu-item__name">Тальятелле с морепродуктами и даси</div>
+              <div class="menu-item__desc">Тальятелле, креветки, кальмар, бульон даси</div>
+            </div>
+            <span class="menu-item__price">980 ₽</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__info">
+              <div class="menu-item__name">Утиная грудка терияки с полентой</div>
+              <div class="menu-item__desc">Утка, терияки, полента, вишня</div>
+            </div>
+            <span class="menu-item__price">1 240 ₽</span>
+          </div>
+        </div>
+
+        <!-- Паста -->
+        <div class="full-menu__panel" data-panel="pasta">
+          <div class="menu-item">
+            <div class="menu-item__info">
+              <div class="menu-item__name">Мисо Карбонара</div>
+              <div class="menu-item__desc">Спагетти, белое мисо, панчетта, пармезан</div>
+            </div>
+            <span class="menu-item__price">750 ₽</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__info">
+              <div class="menu-item__name">Тальятелле неро с кальмаром</div>
+              <div class="menu-item__desc">Тальятелле неро, кальмар, чеснок, чили</div>
+            </div>
+            <span class="menu-item__price">890 ₽</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__info">
+              <div class="menu-item__name">Равиоли с эби и юдзу-баттером</div>
+              <div class="menu-item__desc">Равиоли, креветки, юдзу, масло</div>
+            </div>
+            <span class="menu-item__price">920 ₽</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__info">
+              <div class="menu-item__name">Удон с грибами и трюфельным маслом</div>
+              <div class="menu-item__desc">Удон, шиитаке, эноки, трюфель</div>
+            </div>
+            <span class="menu-item__price">780 ₽</span>
+          </div>
+        </div>
+
+        <!-- Десерты -->
+        <div class="full-menu__panel" data-panel="desserts">
+          <div class="menu-item">
+            <div class="menu-item__info">
+              <div class="menu-item__name">Матча Тирамису</div>
+              <div class="menu-item__desc">Маскарпоне, матча, савоярди</div>
+            </div>
+            <span class="menu-item__price">520 ₽</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__info">
+              <div class="menu-item__name">Панна-котта юдзу</div>
+              <div class="menu-item__desc">Сливки, юдзу, белый шоколад</div>
+            </div>
+            <span class="menu-item__price">480 ₽</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__info">
+              <div class="menu-item__name">Моти с маскарпоне</div>
+              <div class="menu-item__desc">Рисовое тесто, маскарпоне, ягоды</div>
+            </div>
+            <span class="menu-item__price">440 ₽</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__info">
+              <div class="menu-item__name">Шоколадный фондан с мисо-карамелью</div>
+              <div class="menu-item__desc">Шоколад, мисо, карамель, мороженое</div>
+            </div>
+            <span class="menu-item__price">560 ₽</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__info">
+              <div class="menu-item__name">Сорбет юдзу-базилик</div>
+              <div class="menu-item__desc">Юдзу, базилик, мята</div>
+            </div>
+            <span class="menu-item__price">380 ₽</span>
+          </div>
+        </div>
+
+        <!-- Напитки -->
+        <div class="full-menu__panel" data-panel="drinks">
+          <div class="menu-item">
+            <div class="menu-item__info">
+              <div class="menu-item__name">Сакэ-спритц</div>
+              <div class="menu-item__desc">Сакэ, просекко, юдзу, содовая</div>
+            </div>
+            <span class="menu-item__price">650 ₽</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__info">
+              <div class="menu-item__name">Матча латте</div>
+              <div class="menu-item__desc">Церемониальная матча, молоко</div>
+            </div>
+            <span class="menu-item__price">380 ₽</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__info">
+              <div class="menu-item__name">Юдзу лимонад</div>
+              <div class="menu-item__desc">Юдзу, лимон, мята, тоник</div>
+            </div>
+            <span class="menu-item__price">320 ₽</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__info">
+              <div class="menu-item__name">Умами Мартини</div>
+              <div class="menu-item__desc">Джин, вермут, даси, оливка</div>
+            </div>
+            <span class="menu-item__price">720 ₽</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__info">
+              <div class="menu-item__name">Японский виски хайболл</div>
+              <div class="menu-item__desc">Японский виски, содовая, лёд</div>
+            </div>
+            <span class="menu-item__price">590 ₽</span>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -464,6 +736,13 @@
             <path d="M5 12H19M19 12L12 5M19 12L12 19"/>
           </svg>
         </button>
+      </div>
+
+      <div class="reviews__dots" aria-label="Индикатор слайда">
+        <button class="reviews__dot is-active" aria-label="Отзыв 1"></button>
+        <button class="reviews__dot" aria-label="Отзыв 2"></button>
+        <button class="reviews__dot" aria-label="Отзыв 3"></button>
+        <button class="reviews__dot" aria-label="Отзыв 4"></button>
       </div>
     </div>
   </section>

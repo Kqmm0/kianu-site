@@ -1,0 +1,89 @@
+/* === Full Menu — Tabbed Section === */
+.full-menu {
+  padding: var(--s-section) 0;
+  background: var(--c-bg);
+  position: relative;
+}
+
+.full-menu__header {
+  text-align: center;
+  margin-bottom: var(--s-block);
+}
+
+.full-menu__title {
+  font-size: var(--fs-h2);
+}
+
+/* === Tab Navigation === */
+.full-menu__tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: var(--s-block);
+  flex-wrap: wrap;
+}
+
+.full-menu__tab {
+  font-family: var(--f-body);
+  font-size: var(--fs-label);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid var(--c-border);
+  color: var(--c-text-secondary);
+  background: transparent;
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-out);
+}
+
+.full-menu__tab:hover {
+  border-color: var(--c-gold-dim);
+  color: var(--c-text);
+}
+
+.full-menu__tab.is-active {
+  border-color: var(--c-gold);
+  color: var(--c-gold);
+  background: rgba(200,169,126,0.06);
+}
+
+/* === Panel Content === */
+.full-menu__content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.full-menu__panel {
+  display: none;
+}
+
+.full-menu__panel.is-active {
+  display: block;
+  animation: menuFadeIn var(--duration-fast) var(--ease-out);
+}
+
+@keyframes menuFadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* === Mobile: horizontal scrollable tabs === */
+@media (max-width: 768px) {
+  .full-menu__tabs {
+    justify-content: flex-start;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 0.5rem;
+    gap: 0.35rem;
+  }
+  .full-menu__tabs::-webkit-scrollbar {
+    display: none;
+  }
+  .full-menu__tab {
+    flex-shrink: 0;
+    padding: 0.6rem 1rem;
+    font-size: 0.65rem;
+  }
+}

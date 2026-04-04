@@ -40,16 +40,16 @@
     /* bottom lift — strong dark floor for text */
     linear-gradient(180deg,
       transparent             0%,
-      transparent            40%,
-      rgba(5,5,5,0.55)       65%,
-      rgba(5,5,5,0.92)       85%,
+      transparent            35%,
+      rgba(5,5,5,0.60)       62%,
+      rgba(5,5,5,0.93)       85%,
       rgba(5,5,5,0.98)      100%
     ),
     /* left reading zone — safe column for all hero copy */
     linear-gradient(90deg,
-      rgba(5,5,5,0.78)   0%,
-      rgba(5,5,5,0.45)  40%,
-      rgba(5,5,5,0.05)  65%,
+      rgba(5,5,5,0.88)   0%,
+      rgba(5,5,5,0.55)  38%,
+      rgba(5,5,5,0.08)  62%,
       transparent       100%
     ),
     /* cinematic corner vignette */
@@ -64,6 +64,23 @@
   position: relative;
   z-index: 1;
   max-width: 620px;
+}
+
+/* Soft localized veil behind text — feathered, no visible edges */
+.hero__content::before {
+  content: '';
+  position: absolute;
+  bottom: -2rem;
+  left: -3rem;
+  width: calc(100% + 6rem);
+  height: calc(100% + 4rem);
+  background: radial-gradient(
+    ellipse 100% 100% at 30% 70%,
+    rgba(5,5,5,0.35) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: -1;
 }
 
 .hero__subtitle {
@@ -168,9 +185,9 @@
     background:
       linear-gradient(180deg,
         transparent          0%,
-        rgba(5,5,5,0.3)     30%,
-        rgba(5,5,5,0.75)    65%,
-        rgba(5,5,5,0.97)   100%
+        rgba(5,5,5,0.35)    25%,
+        rgba(5,5,5,0.80)    60%,
+        rgba(5,5,5,0.98)   100%
       );
   }
 

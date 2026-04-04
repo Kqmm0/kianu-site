@@ -131,20 +131,53 @@
   height: 18px;
 }
 
+/* === Pagination Dots — hidden on desktop === */
+.reviews__dots {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .review-card {
     flex: 0 0 85vw;
     min-width: unset;
+    scroll-snap-align: start;
   }
   .reviews__track-wrapper {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
+    scroll-snap-type: x mandatory;
   }
   .reviews__track-wrapper::-webkit-scrollbar {
     display: none;
   }
   .reviews__nav {
-    display: none;
+    display: flex;
+  }
+  .reviews__nav-btn {
+    width: 44px;
+    height: 44px;
+  }
+
+  /* Mobile dots */
+  .reviews__dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1.25rem;
+  }
+  .reviews__dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--c-border-light);
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: all var(--duration-fast) var(--ease-out);
+  }
+  .reviews__dot.is-active {
+    background: var(--c-gold);
+    transform: scale(1.3);
   }
 }
